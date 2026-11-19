@@ -1,0 +1,16 @@
+[Meena] listening with binding bangalore.*.food
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=b50f95df-5f49-4e22-a95d-9377690e5db1 status=received
+[Meena] RECEIVED routing_key=bangalore.koramangala.food message_id=f46c7fe9-a653-4b9d-836d-849130dd23a5 status=received
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=8f6932fd-ee72-489e-8583-7415e94b997d status=received
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=b6ff0fd0-186c-4a29-b1c5-09af103a6ed3 status=received
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=0d2a89b4-05c2-4fdb-b144-18fed188de5a status=received
+[Meena] REJECTED routing_key=bangalore.indiranagar.food message_id=568c6734-8f91-4d40-8242-0b0d5d0fce3a status=rejected reason=missing_or_invalid_zone
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=19176efd-7e68-48c0-a425-0d249a80083f status=received
+[Meena] RECEIVED routing_key=bangalore.koramangala.food message_id=7efa4156-7729-4e8b-8210-2f3c8af5bd97 status=received
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=7bdf2c98-e571-4b61-92f2-f17dc83af02b status=received
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=3bf5dc66-1f9f-4c76-b505-eed08e4ff43f status=received
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=e07d1cba-e4b1-4da1-93ba-a6dfa0aa8dfd status=received
+[Meena] RECEIVED routing_key=bangalore.koramangala.food message_id=c553d510-e2a9-4b5a-aa70-dc975a998be1 status=received
+[Meena] RECEIVED routing_key=bangalore.koramangala.food message_id=40745c8a-e820-4547-9db0-d4a958899bf5 status=received
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=0dc093d9-1a34-4d40-aaf0-e0ac3a542f43 status=received
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=c2beb20d-49e0-4899-a8f8-a8ca8eb25e18 status=received

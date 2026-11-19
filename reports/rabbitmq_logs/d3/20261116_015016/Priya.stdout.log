@@ -1,0 +1,6 @@
+[Priya] listening with binding bangalore.indiranagar.*
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=6a4a46cf-be07-4a21-8b2e-19a63dd48b07 ack_status=acked
+[Priya] RECEIVED routing_key=bangalore.indiranagar.ride message_id=0471b26b-def4-447b-a22b-e2d05e2d05a2 ack_status=acked
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=ea1ac613-f8bc-4f4c-ae35-e6f8a9e9c8b8 ack_status=acked
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=624c72ad-adc1-4262-b6f2-a4e841431dfb ack_status=acked
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=a0ce5101-2e35-486f-8167-6347873fa527 ack_status=acked

@@ -1,0 +1,25 @@
+BATCH_ID=bonus-1c10364cdd674d3aba1e1b8e2ae43125 CONSUMER_READY_AT=2026-11-16T13:56:53.864064+00:00 QUEUE=freshcart-orders-ingest
+BATCH_ID=bonus-1c10364cdd674d3aba1e1b8e2ae43125 COLLECTION_END=2026-11-16T13:57:53.918839+00:00 COLLECTION_START=2026-11-16T13:56:53.917767+00:00 ELAPSED_SECONDS=60.001 MESSAGE_COUNT=2 REJECTED_COUNT=0 COLLECTION_INTERRUPTED=False
+web: 2 records -> data\freshcart_landing\web\web__bonus-1c10364cdd674d3aba1e1b8e2ae43125.json.gz
+ACKED routing_key=freshcart.orders.web order_id=BONUS-ORDER-001 delivery_tag=1
+ACKED routing_key=freshcart.orders.web order_id=BONUS-ORDER-002 delivery_tag=2
+BATCH_ID=bonus-1c10364cdd674d3aba1e1b8e2ae43125 LANDING_FILE=data\freshcart_landing\web\web__bonus-1c10364cdd674d3aba1e1b8e2ae43125.json.gz
+crm: 4 records -> data\freshcart_landing\crm\crm__bonus-ref-bonus-1c10364cdd674d3aba1e1b8e2ae43125.json.gz
+4 rows -> bronze.customers_raw
+fx: 1 records -> data\freshcart_landing\fx\fx__bonus-ref-bonus-1c10364cdd674d3aba1e1b8e2ae43125.json.gz
+1 rows -> bronze.fx_raw
+pincode: 3 records -> data\freshcart_landing\pincode\pincode__bonus-ref-bonus-1c10364cdd674d3aba1e1b8e2ae43125.json.gz
+3 rows -> bronze.pincode_raw
+2 rows -> bronze.orders_raw
+TRANSFORM_STAGE=SQL_10_ORDERS_CLEAN
+TRANSFORM_STAGE=SQL_20_ORDERS_DEDUP
+TRANSFORM_STAGE=SQL_30_CUSTOMERS_SCD2
+TRANSFORM_STAGE=SQL_31_FX_DAILY
+TRANSFORM_STAGE=SQL_32_PINCODE_GEO
+TRANSFORM_STAGE=SQL_40_GOLD
+DUPLICATE_GOLD_ORDER_IDS=[]
+SNOWFLAKE_DATABASE=FRESHCART_BONUS
+LANDING_FILE=data\freshcart_landing\web\web__bonus-1c10364cdd674d3aba1e1b8e2ae43125.json.gz
+BRONZE_ORDERS=2 SILVER_ORDERS=2
+GOLD=2 orders amount_inr=5092.38 loyalty_points=50
+GOLD_ORDER_IDS=["BONUS-ORDER-001", "BONUS-ORDER-002"]

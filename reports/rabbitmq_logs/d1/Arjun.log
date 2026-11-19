@@ -1,0 +1,3 @@
+[Arjun] listening with binding bangalore.*.ride
+[Arjun] RECEIVED routing_key=bangalore.indiranagar.ride message_id=D1-02 status=received
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=D1-03 status=received

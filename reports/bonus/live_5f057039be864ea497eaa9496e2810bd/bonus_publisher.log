@@ -1,0 +1,2 @@
+PUBLISHED order_id=BONUS-ORDER-001 routing_key=freshcart.orders.web confirmed=True
+PUBLISHED order_id=BONUS-ORDER-002 routing_key=freshcart.orders.web confirmed=True

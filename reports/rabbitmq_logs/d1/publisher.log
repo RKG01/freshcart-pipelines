@@ -1,0 +1,5 @@
+id=D1-02 routing_key=bangalore.indiranagar.ride publisher_confirmation=received route_status=routed
+id=D1-03 routing_key=bangalore.whitefield.ride publisher_confirmation=received route_status=routed
+id=D1-04 routing_key=chennai.tnagar.food publisher_confirmation=received route_status=routed
+id=D1-05 routing_key=chennai.whitefield.ride publisher_confirmation=received route_status=dropped_unroutable
+id=D1-06 routing_key=bangalore.koramangala publisher_confirmation=received route_status=routed

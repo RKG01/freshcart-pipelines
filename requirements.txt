@@ -1,0 +1,9 @@
+joblib
+mage-ai
+pandas
+pika
+pytest
+python-dotenv
+reportlab
+scikit-learn
+snowflake-connector-python

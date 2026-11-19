@@ -1,0 +1,27 @@
+WARNING:traitlets:Message signing is disabled.  This is insecure and not recommended!
+WARNING:traitlets:Message signing is disabled.  This is insecure and not recommended!
+INFO:mage_ai.data_preparation.executors.pipeline_executor:[PipelineExecutor] No running loop, using asyncio.run
+--------------------------------------------------------------
+1/1 tests passed.
+--------------------------------------------------------------
+1/1 tests passed.
+--------------------------------------------------------------
+1/1 tests passed.
+--------------------------------------------------------------
+1/1 tests passed.
+Confusion matrix (rows = actual, columns = predicted; labels = [0, 1, 2]):
+    0  1   2
+0  10  0   0
+1   0  9   0
+2   0  0  11
+Evaluation metrics:
+   metric  value
+ accuracy    1.0
+precision    1.0
+   recall    1.0
+ f1_score    1.0
+--------------------------------------------------------------
+1/1 tests passed.
+--------------------------------------------------------------
+1/1 tests passed.
+Pipeline run completed.

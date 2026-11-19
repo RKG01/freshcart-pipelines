@@ -1,0 +1,12 @@
+[Priya] listening with binding bangalore.indiranagar.*
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=8f6932fd-ee72-489e-8583-7415e94b997d status=received
+[Priya] RECEIVED routing_key=bangalore.indiranagar.ride message_id=a4e999af-0786-45cd-99be-386edd9f1037 status=received
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=0d2a89b4-05c2-4fdb-b144-18fed188de5a status=received
+[Priya] RECEIVED routing_key=bangalore.indiranagar.ride message_id=9b3b0098-69b7-410b-b04b-92ea4d8f6e95 status=received
+[Priya] REJECTED routing_key=bangalore.indiranagar.food message_id=568c6734-8f91-4d40-8242-0b0d5d0fce3a status=rejected reason=missing_or_invalid_zone
+[Priya] RECEIVED routing_key=bangalore.indiranagar.ride message_id=bec457de-3bb6-4854-b4fc-df65670e7c09 status=received
+[Priya] REJECTED routing_key=bangalore.indiranagar.ride message_id=d5e9b38a-287d-40df-92ee-bb6f9bdf8500 status=rejected reason=missing_or_invalid_zone
+[Priya] RECEIVED routing_key=bangalore.indiranagar.ride message_id=bfbbaceb-723b-4362-aaf6-d41e5bd3118f status=received
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=e07d1cba-e4b1-4da1-93ba-a6dfa0aa8dfd status=received
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=0dc093d9-1a34-4d40-aaf0-e0ac3a542f43 status=received
+[Priya] RECEIVED routing_key=bangalore.indiranagar.food message_id=c2beb20d-49e0-4899-a8f8-a8ca8eb25e18 status=received

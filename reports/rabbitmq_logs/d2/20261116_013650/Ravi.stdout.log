@@ -1,0 +1,7 @@
+[Ravi] listening with binding bangalore.koramangala.*
+[Ravi] RECEIVED routing_key=bangalore.koramangala.food message_id=f46c7fe9-a653-4b9d-836d-849130dd23a5 status=received
+[Ravi] REJECTED routing_key=bangalore.koramangala.ride message_id=dbe05055-4fc4-4bf0-900d-da04ef190c8d status=rejected reason=missing_or_invalid_zone
+[Ravi] RECEIVED routing_key=bangalore.koramangala.ride message_id=7f1f261a-33ff-4e4d-8c86-3a136fa8f01f status=received
+[Ravi] RECEIVED routing_key=bangalore.koramangala.food message_id=7efa4156-7729-4e8b-8210-2f3c8af5bd97 status=received
+[Ravi] RECEIVED routing_key=bangalore.koramangala.food message_id=c553d510-e2a9-4b5a-aa70-dc975a998be1 status=received
+[Ravi] RECEIVED routing_key=bangalore.koramangala.food message_id=40745c8a-e820-4547-9db0-d4a958899bf5 status=received

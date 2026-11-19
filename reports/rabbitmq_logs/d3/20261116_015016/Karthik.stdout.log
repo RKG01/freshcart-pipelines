@@ -1,0 +1,4 @@
+[Karthik] listening with binding chennai.tnagar.food
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=64b8b46e-b5de-440e-b5e4-887c5684d6bd ack_status=acked
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=d7ee875f-82c9-49cc-b50c-44eac3443706 ack_status=acked
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=acc50c60-f44e-446d-8feb-d26f4dd1b429 ack_status=acked

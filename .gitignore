@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.pkl
+*.csv
+!reports/c3_confusion_matrix.csv
+mage.log
+.venv/
+data/freshcart_landing/
+iris_project/.file_versions/
+mage_data/
+iris_project/.ssh_tunnel/
+reports/c3_cloudflared.log

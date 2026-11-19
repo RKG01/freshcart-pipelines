@@ -1,0 +1,156 @@
+PHASE 1: DOCKER AND ENVIRONMENT CHECK
+Timestamp: 2026-11-16 01:08:32 +05:30
+
+=== docker --version ===
+Docker version 29.6.2, build dfc4efb
+exit=0
+
+=== docker compose version ===
+Docker Compose version v5.3.1
+exit=0
+
+=== docker info ===
+Client:
+ Version:    29.6.2
+ Context:    desktop-linux
+ Debug Mode: true
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.111.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-agent.exe
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.27.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.35.0-desktop.2
+    Path:     C:\Program Files\Docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.3.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     C:\Program Files\Docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.4.3
+    Path:     C:\Program Files\Docker\cli-plugins\docker-desktop.exe
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.7
+    Path:     C:\Program Files\Docker\cli-plugins\docker-dhi.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     C:\Program Files\Docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.43.3
+    Path:     C:\Program Files\Docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.6
+    Path:     C:\Program Files\Docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.6.9
+    Path:     C:\Program Files\Docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.2.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-pass.exe
+  sandbox: "docker sandbox" is deprecated, use Docker Sandboxes instead (Docker Inc.)
+    Version:  v0.13.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sandbox.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.23.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 5
+  Running: 2
+  Paused: 0
+  Stopped: 3
+ Images: 7
+ Server Version: 29.6.2
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: e53c7c1516c3b2bff98eb76f1f4117477e6f4e66
+ runc version: v1.3.6-0-g491b69ba
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.18.58.1-microsoft-standard-WSL2
+ Operating System: Docker Desktop (containerized)
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 12
+ Total Memory: 7.462GiB
+ Name: docker-desktop
+ ID: 467081ca-08ae-4c22-80fd-ee2497524142
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+  File Descriptors: 65
+  Goroutines: 107
+  System Time: 2026-11-15T19:38:33.942749858Z
+  EventsListeners: 14
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+WARNING: Plugin "C:\\Users\\ASUS\\.docker\\cli-plugins\\docker-dev.exe" is not valid: failed to fetch metadata: fork/exec C:\Users\ASUS\.docker\cli-plugins\docker-dev.exe: The system cannot find the file specified.
+WARNING: Plugin "C:\\Users\\ASUS\\.docker\\cli-plugins\\docker-feedback.exe" is not valid: failed to fetch metadata: fork/exec C:\Users\ASUS\.docker\cli-plugins\docker-feedback.exe: The system cannot find the file specified.
+WARNING: Plugin "C:\\Users\\ASUS\\.docker\\cli-plugins\\docker-sbom.exe" is not valid: failed to fetch metadata: fork/exec C:\Users\ASUS\.docker\cli-plugins\docker-sbom.exe: The system cannot find the file specified.
+exit=0
+
+=== docker ps ===
+CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+47ab4beb01d1   cloudflare/cloudflared:latest   "cloudflared tunnel …"   24 minutes ago   Up 24 minutes                                                 iris-cloudflared-c3
+7eee760380f0   mageai/mageai:latest            "/app/run_app.sh mag…"   25 minutes ago   Up 25 minutes   0.0.0.0:6789->6789/tcp, [::]:6789->6789/tcp   iris-mage-ui-c3
+exit=0
+
+=== Running RabbitMQ containers ===
+No running container with ancestor rabbitmq.
+exit=0
+
+=== Port occupancy ===
+Port 5672: not occupied
+Port 15672: not occupied
+
+=== pika in existing .venv ===
+WARNING: Package(s) not found: pika
+exit=1
+
+=== Install pika into existing .venv ===
+Collecting pika
+  Using cached pika-1.4.4-py3-none-any.whl.metadata (13 kB)
+Using cached pika-1.4.4-py3-none-any.whl (165 kB)
+Installing collected packages: pika
+Successfully installed pika-1.4.4
+exit=0
+
+=== Verify pika import/version ===
+pika 1.4.4
+exit=0

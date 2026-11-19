@@ -1,0 +1,24 @@
+C:\Users\ASUS\OneDrive\Desktop\freshcart-pipelines\.venv\Lib\site-packages\snowflake\connector\connection\_connection.py:137: FutureWarning: enable_server_session_keep_alive_auto_detection was not set and defaults to True. In a future version, the default will change to None. Please provide an explicit value: True = check for running async queries before logout (queries are preserved); False/None = always send logout on close (async queries may be terminated by server). Logout behavior can also be overridden with server_session_keep_alive. See the connection parameter docs for more info.
+  options = self.config.to_proto_options(
+DATABASE=FRESHCART_BONUS
+SQL_BRONZE_ORDER_TABLE_ROWS=SELECT COUNT(*) FROM FRESHCART_BONUS.BRONZE.ORDERS_RAW
+RESULT_BRONZE_ORDER_TABLE_ROWS=[[4]]
+SQL_BRONZE_EXPECTED_ORDER_ROWS=SELECT COUNT_IF(raw:order_id::STRING IN ('BONUS-ORDER-001','BONUS-ORDER-002')) FROM FRESHCART_BONUS.BRONZE.ORDERS_RAW
+RESULT_BRONZE_EXPECTED_ORDER_ROWS=[[4]]
+SQL_SILVER_TABLE_ROWS=SELECT COUNT(*) FROM FRESHCART_BONUS.SILVER.ORDERS_DEDUP
+RESULT_SILVER_TABLE_ROWS=[[2]]
+SQL_SILVER_EXPECTED_ORDERS=SELECT COUNT(*) FROM FRESHCART_BONUS.SILVER.ORDERS_DEDUP WHERE order_id IN ('BONUS-ORDER-001','BONUS-ORDER-002')
+RESULT_SILVER_EXPECTED_ORDERS=[[2]]
+SQL_GOLD_TOTALS=SELECT COUNT(*), COALESCE(SUM(amount_inr),0), COALESCE(SUM(loyalty_points),0) FROM FRESHCART_BONUS.GOLD.FCT_ORDERS WHERE order_id IN ('BONUS-ORDER-001','BONUS-ORDER-002')
+RESULT_GOLD_TOTALS=[[2, "5092.38", 50]]
+SQL_GOLD_PER_ORDER=SELECT order_id, COUNT(*), amount_inr, loyalty_points FROM FRESHCART_BONUS.GOLD.FCT_ORDERS WHERE order_id IN ('BONUS-ORDER-001','BONUS-ORDER-002') GROUP BY order_id, amount_inr, loyalty_points ORDER BY order_id
+RESULT_GOLD_PER_ORDER=[["BONUS-ORDER-001", 1, "1550.00", 15], ["BONUS-ORDER-002", 1, "3542.38", 35]]
+SQL_GOLD_DUPLICATE_IDS=SELECT order_id, COUNT(*) FROM FRESHCART_BONUS.GOLD.FCT_ORDERS GROUP BY order_id HAVING COUNT(*) > 1 ORDER BY order_id
+RESULT_GOLD_DUPLICATE_IDS=[]
+SQL_CUSTOMER_FIXTURE_ROWS=SELECT COUNT(*) FROM FRESHCART_BONUS.BRONZE.CUSTOMERS_RAW WHERE source='crm'
+RESULT_CUSTOMER_FIXTURE_ROWS=[[4]]
+SQL_FX_FIXTURE_ROWS=SELECT COUNT(*) FROM FRESHCART_BONUS.BRONZE.FX_RAW WHERE source='fx'
+RESULT_FX_FIXTURE_ROWS=[[1]]
+SQL_PINCODE_FIXTURE_ROWS=SELECT COUNT(*) FROM FRESHCART_BONUS.BRONZE.PINCODE_RAW WHERE source='pincode'
+RESULT_PINCODE_FIXTURE_ROWS=[[3]]
+REPLAY_SNAPSHOT=PASS

@@ -1,0 +1,13 @@
+[Arjun] listening with binding bangalore.*.ride
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=f15d129a-7d27-4d63-a5c2-a5c50aa78b7f status=received
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=41db24c1-9064-4ded-afe0-d63a33e1df19 status=received
+[Arjun] REJECTED routing_key=bangalore.koramangala.ride message_id=dbe05055-4fc4-4bf0-900d-da04ef190c8d status=rejected reason=missing_or_invalid_zone
+[Arjun] RECEIVED routing_key=bangalore.indiranagar.ride message_id=a4e999af-0786-45cd-99be-386edd9f1037 status=received
+[Arjun] RECEIVED routing_key=bangalore.koramangala.ride message_id=7f1f261a-33ff-4e4d-8c86-3a136fa8f01f status=received
+[Arjun] RECEIVED routing_key=bangalore.indiranagar.ride message_id=9b3b0098-69b7-410b-b04b-92ea4d8f6e95 status=received
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=38ee7f17-5183-4a4e-a947-5ab7063df44e status=received
+[Arjun] RECEIVED routing_key=bangalore.indiranagar.ride message_id=bec457de-3bb6-4854-b4fc-df65670e7c09 status=received
+[Arjun] REJECTED routing_key=bangalore.indiranagar.ride message_id=d5e9b38a-287d-40df-92ee-bb6f9bdf8500 status=rejected reason=missing_or_invalid_zone
+[Arjun] RECEIVED routing_key=bangalore.indiranagar.ride message_id=bfbbaceb-723b-4362-aaf6-d41e5bd3118f status=received
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=d541d0f5-9625-4c95-ae93-61257744858f status=received
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=8d186d59-9fc6-430b-8ef8-1c660bd50906 status=received

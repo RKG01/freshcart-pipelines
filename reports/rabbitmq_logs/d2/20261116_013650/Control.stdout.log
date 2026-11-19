@@ -1,0 +1,28 @@
+[Control] listening with binding bangalore.#
+[Control] RECEIVED routing_key=bangalore.whitefield.food message_id=b50f95df-5f49-4e22-a95d-9377690e5db1 status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.ride message_id=f15d129a-7d27-4d63-a5c2-a5c50aa78b7f status=received
+[Control] RECEIVED routing_key=bangalore.koramangala.food message_id=f46c7fe9-a653-4b9d-836d-849130dd23a5 status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.ride message_id=41db24c1-9064-4ded-afe0-d63a33e1df19 status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.food message_id=8f6932fd-ee72-489e-8583-7415e94b997d status=received
+[Control] REJECTED routing_key=bangalore.koramangala.ride message_id=dbe05055-4fc4-4bf0-900d-da04ef190c8d status=rejected reason=missing_or_invalid_zone
+[Control] RECEIVED routing_key=bangalore.indiranagar.ride message_id=a4e999af-0786-45cd-99be-386edd9f1037 status=received
+[Control] RECEIVED routing_key=bangalore.koramangala.ride message_id=7f1f261a-33ff-4e4d-8c86-3a136fa8f01f status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.food message_id=b6ff0fd0-186c-4a29-b1c5-09af103a6ed3 status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.food message_id=0d2a89b4-05c2-4fdb-b144-18fed188de5a status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.ride message_id=9b3b0098-69b7-410b-b04b-92ea4d8f6e95 status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.ride message_id=38ee7f17-5183-4a4e-a947-5ab7063df44e status=received
+[Control] REJECTED routing_key=bangalore.indiranagar.food message_id=568c6734-8f91-4d40-8242-0b0d5d0fce3a status=rejected reason=missing_or_invalid_zone
+[Control] RECEIVED routing_key=bangalore.whitefield.food message_id=19176efd-7e68-48c0-a425-0d249a80083f status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.ride message_id=bec457de-3bb6-4854-b4fc-df65670e7c09 status=received
+[Control] RECEIVED routing_key=bangalore.koramangala.food message_id=7efa4156-7729-4e8b-8210-2f3c8af5bd97 status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.food message_id=7bdf2c98-e571-4b61-92f2-f17dc83af02b status=received
+[Control] REJECTED routing_key=bangalore.indiranagar.ride message_id=d5e9b38a-287d-40df-92ee-bb6f9bdf8500 status=rejected reason=missing_or_invalid_zone
+[Control] RECEIVED routing_key=bangalore.indiranagar.ride message_id=bfbbaceb-723b-4362-aaf6-d41e5bd3118f status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.food message_id=3bf5dc66-1f9f-4c76-b505-eed08e4ff43f status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.food message_id=e07d1cba-e4b1-4da1-93ba-a6dfa0aa8dfd status=received
+[Control] RECEIVED routing_key=bangalore.koramangala.food message_id=c553d510-e2a9-4b5a-aa70-dc975a998be1 status=received
+[Control] RECEIVED routing_key=bangalore.koramangala.food message_id=40745c8a-e820-4547-9db0-d4a958899bf5 status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.food message_id=0dc093d9-1a34-4d40-aaf0-e0ac3a542f43 status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.ride message_id=d541d0f5-9625-4c95-ae93-61257744858f status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.ride message_id=8d186d59-9fc6-430b-8ef8-1c660bd50906 status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.food message_id=c2beb20d-49e0-4899-a8f8-a8ca8eb25e18 status=received

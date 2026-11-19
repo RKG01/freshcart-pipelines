@@ -1,0 +1,42 @@
+C:\Users\ASUS\OneDrive\Desktop\freshcart-pipelines\.venv\Lib\site-packages\snowflake\connector\connection\_connection.py:137: FutureWarning: enable_server_session_keep_alive_auto_detection was not set and defaults to True. In a future version, the default will change to None. Please provide an explicit value: True = check for running async queries before logout (queries are preserved); False/None = always send logout on close (async queries may be terminated by server). Logout behavior can also be overridden with server_session_keep_alive. See the connection parameter docs for more info.
+  options = self.config.to_proto_options(
+CONNECTION=success role=ACCOUNTADMIN warehouse=COMPUTE_WH database=FRESHCART_B1
+=== BEFORE TRANSACTION: read-only preconditions ===
+SQL> SELECT COUNT(*) FROM FRESHCART_B1.SILVER.ORDERS_DEDUP WHERE ORDER_ID = 'B5-MOCK-FUTURE-001'
+TEMP_ID_COUNT_BEFORE=0
+SQL> SELECT COUNT(*) FROM FRESHCART_B1.SILVER.ORDERS_DEDUP WHERE ORDER_DATE > CURRENT_DATE()
+FUTURE_DATE_COUNT_BEFORE=0
+SQL> SELECT COUNT(*) FROM FRESHCART_B1.SILVER.ORDERS_DEDUP
+DEDUP_ROW_COUNT_BEFORE=4
+SQL> SELECT COUNT(*), SUM(AMOUNT_INR), SUM(LOYALTY_POINTS) FROM FRESHCART_B1.GOLD.FCT_ORDERS
+GOLD_TOTALS_BEFORE=orders:4 revenue_inr:7785.00 loyalty_points:161
+SQL> BEGIN TRANSACTION;
+SQL> INSERT INTO FRESHCART_B1.SILVER.ORDERS_DEDUP (ORDER_ID, ORDER_DATE) VALUES ('B5-MOCK-FUTURE-001', TO_DATE('2099-01-01', 'YYYY-MM-DD'));
+INSERT_ROWS_AFFECTED=1
+=== TARGETED FUTURE-DATE QUALITY CHECK WHILE MOCK EXISTS ===
+SQL> SELECT COUNT(*) FROM FRESHCART_B1.SILVER.ORDERS_DEDUP WHERE ORDER_DATE > CURRENT_DATE()
+future-dated silver orders             1   PROBLEM
+SQL> DELETE FROM FRESHCART_B1.SILVER.ORDERS_DEDUP WHERE ORDER_ID = 'B5-MOCK-FUTURE-001';
+DELETE_ROWS_AFFECTED=1
+=== POST-CLEANUP VERIFICATION (inside transaction) ===
+SQL> SELECT COUNT(*) FROM FRESHCART_B1.SILVER.ORDERS_DEDUP WHERE ORDER_ID = 'B5-MOCK-FUTURE-001'
+TEMP_ID_COUNT_AFTER=0
+SQL> SELECT COUNT(*) FROM FRESHCART_B1.SILVER.ORDERS_DEDUP WHERE ORDER_DATE > CURRENT_DATE()
+FUTURE_DATE_COUNT_AFTER=0
+future-dated silver orders             0   OK
+SQL> SELECT COUNT(*) FROM FRESHCART_B1.SILVER.ORDERS_DEDUP
+DEDUP_ROW_COUNT_AFTER=4
+SQL> SELECT COUNT(*), SUM(AMOUNT_INR), SUM(LOYALTY_POINTS) FROM FRESHCART_B1.GOLD.FCT_ORDERS
+GOLD_TOTALS_AFTER=orders:4 revenue_inr:7785.00 loyalty_points:161
+ALL_PRECOMMIT_CHECKS=passed
+SQL> COMMIT;
+COMMIT=success
+B5_DEMONSTRATION=success
+C:\Users\ASUS\OneDrive\Desktop\freshcart-pipelines\.venv\Lib\site-packages\snowflake\connector\connection\_connection.py:137: FutureWarning: enable_server_session_keep_alive_auto_detection was not set and defaults to True. In a future version, the default will change to None. Please provide an explicit value: True = check for running async queries before logout (queries are preserved); False/None = always send logout on close (async queries may be terminated by server). Logout behavior can also be overridden with server_session_keep_alive. See the connection parameter docs for more info.
+  options = self.config.to_proto_options(
+POST_COMMIT_READ_ONLY_VERIFICATION_BEGIN
+POST_COMMIT_TEMP_ID_COUNT=0
+POST_COMMIT_FUTURE_DATE_COUNT=0
+POST_COMMIT_DEDUP_ROW_COUNT=4
+POST_COMMIT_GOLD_TOTALS=orders:4 revenue_inr:7785.00 loyalty_points:161
+POST_COMMIT_READ_ONLY_VERIFICATION_END

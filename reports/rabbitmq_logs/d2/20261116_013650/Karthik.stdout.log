@@ -1,0 +1,10 @@
+[Karthik] listening with binding chennai.tnagar.food
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=a95fc207-fcc7-484e-9577-ff4d25693375 status=received
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=8d1d9aec-20b5-4af1-a08a-7022f0a6f67b status=received
+[Karthik] REJECTED routing_key=chennai.tnagar.food message_id=a58d66b7-bc63-4c0b-8006-c12f12f6ab15 status=rejected reason=missing_or_invalid_zone
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=2e406d70-a228-4dcf-a868-8c3c952904cf status=received
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=b2ff205a-4f18-4982-9061-2255b7d3f83f status=received
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=5f6b4ef9-6548-408e-ba90-2018798d761c status=received
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=4f3d2a3a-e92f-4195-9608-ad99eab84268 status=received
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=c8a508e5-b595-43e5-98ad-6117005029f6 status=received
+[Karthik] RECEIVED routing_key=chennai.tnagar.food message_id=4b3a42ad-8bb7-4c07-809c-a2956ed038b6 status=received

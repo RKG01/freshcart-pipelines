@@ -1,0 +1,5 @@
+[Control] listening with binding bangalore.#
+[Control] RECEIVED routing_key=bangalore.koramangala.food message_id=D1-01 status=received
+[Control] RECEIVED routing_key=bangalore.indiranagar.ride message_id=D1-02 status=received
+[Control] RECEIVED routing_key=bangalore.whitefield.ride message_id=D1-03 status=received
+[Control] RECEIVED routing_key=bangalore.koramangala message_id=D1-06 status=received

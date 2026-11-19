@@ -1,0 +1,26 @@
+run_id=20261116_013650
+python=C:\Users\ASUS\OneDrive\Desktop\freshcart-pipelines\.venv\Scripts\python.exe
+started=driver name=Ravi pid=30052
+started=driver name=Priya pid=23680
+started=driver name=Arjun pid=26236
+started=driver name=Meena pid=1556
+started=driver name=Karthik pid=30660
+started=driver name=Control pid=7220
+driver_ready=Ravi pattern=bangalore.koramangala.*
+driver_ready=Priya pattern=bangalore.indiranagar.*
+driver_ready=Arjun pattern=bangalore.*.ride
+driver_ready=Meena pattern=bangalore.*.food
+driver_ready=Karthik pattern=chennai.tnagar.food
+driver_ready=Control pattern=bangalore.#
+started=dispatcher name=dispatcher pid=20776
+dispatcher_start_local=2026-11-16T01:36:50.9758712+05:30
+dispatcher_stop_local=2026-11-16T01:38:51.0731853+05:30
+elapsed=00:02:00.0973141
+minimum_duration_seconds=120
+stopped=dispatcher name=dispatcher pid=20776
+stopped=driver name=Karthik pid=30660
+stopped=driver name=Control pid=7220
+stopped=driver name=Ravi pid=30052
+stopped=driver name=Priya pid=23680
+stopped=driver name=Arjun pid=26236
+stopped=driver name=Meena pid=1556

@@ -1,0 +1,3 @@
+C:\Users\ASUS\OneDrive\Desktop\freshcart-pipelines\.venv\Lib\site-packages\snowflake\connector\connection\_connection.py:137: FutureWarning: enable_server_session_keep_alive_auto_detection was not set and defaults to True. In a future version, the default will change to None. Please provide an explicit value: True = check for running async queries before logout (queries are preserved); False/None = always send logout on close (async queries may be terminated by server). Logout behavior can also be overridden with server_session_keep_alive. See the connection parameter docs for more info.
+  options = self.config.to_proto_options(
+BONUS_DATABASE_INITIALIZATION=SUCCESS database=FRESHCART_BONUS ownership_status=READY

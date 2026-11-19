@@ -1,0 +1,139 @@
+WARNING:traitlets:Message signing is disabled.  This is insecure and not recommended!
+WARNING:traitlets:Message signing is disabled.  This is insecure and not recommended!
+INFO:mage_ai.data_preparation.executors.pipeline_executor:[PipelineExecutor] No running loop, using asyncio.run
+--------------------------------------------------------------
+1/1 tests passed.
+--------------------------------------------------------------
+1/1 tests passed.
+--------------------------------------------------------------
+1/1 tests passed.
+--------------------------------------------------------------
+1/1 tests passed.
+Confusion matrix (rows = actual, columns = predicted; labels = [0, 1, 2]):
+    0  1   2
+0  10  0   0
+1   0  9   0
+2   0  0  11
+Evaluation metrics:
+   metric  value
+ accuracy    1.0
+precision    1.0
+   recall    1.0
+ f1_score    1.0
+--------------------------------------------------------------
+1/1 tests passed.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/executors/p │
+│ ipeline_executor.py:82 in execute                                            │
+│                                                                              │
+│    79 │   │   │   │   )                                                      │
+│    80 │   │   # Execute the task based on current context                    │
+│    81 │   │   try:                                                           │
+│ ❱  82 │   │   │   loop = asyncio.get_running_loop()                          │
+│    83 │   │   │   logger.info(f'[PipelineExecutor] Found running loop {loop} │
+│    84 │   │   │   # We're in an async context, use create_task               │
+│    85 │   │   │   task = asyncio.create_task(_execute_task())                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /usr/local/lib/python3.10/site-packages/mage_ai/cli/main.py:248 in run       │
+│                                                                              │
+│   245 │   │   │   template_runtime_configuration = json.loads(template_runti │
+│   246 │   │                                                                  │
+│   247 │   │   if block_uuid is None:                                         │
+│ ❱ 248 │   │   │   ExecutorFactory.get_pipeline_executor(                     │
+│   249 │   │   │   │   pipeline,                                              │
+│   250 │   │   │   │   execution_partition=execution_partition,               │
+│   251 │   │   │   │   executor_type=executor_type,                           │
+│                                                                              │
+│ /usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/executors/p │
+│ ipeline_executor.py:90 in execute                                            │
+│                                                                              │
+│    87 │   │   except RuntimeError:                                           │
+│    88 │   │   │   # No running loop, safe to use asyncio.run                 │
+│    89 │   │   │   logger.info('[PipelineExecutor] No running loop, using asy │
+│ ❱  90 │   │   │   asyncio.run(_execute_task())                               │
+│    91 │   │                                                                  │
+│    92 │   │   self.logger_manager.output_logs_to_destination()               │
+│    93                                                                        │
+│                                                                              │
+│ /usr/local/lib/python3.10/asyncio/runners.py:44 in run                       │
+│                                                                              │
+│   41 │   │   events.set_event_loop(loop)                                     │
+│   42 │   │   if debug is not None:                                           │
+│   43 │   │   │   loop.set_debug(debug)                                       │
+│ ❱ 44 │   │   return loop.run_until_complete(main)                            │
+│   45 │   finally:                                                            │
+│   46 │   │   try:                                                            │
+│   47 │   │   │   _cancel_all_tasks(loop)                                     │
+│                                                                              │
+│ /usr/local/lib/python3.10/asyncio/base_events.py:649 in run_until_complete   │
+│                                                                              │
+│    646 │   │   if not future.done():                                         │
+│    647 │   │   │   raise RuntimeError('Event loop stopped before Future comp │
+│    648 │   │                                                                 │
+│ ❱  649 │   │   return future.result()                                        │
+│    650 │                                                                     │
+│    651 │   def stop(self):                                                   │
+│    652 │   │   """Stop running the event loop.                               │
+│                                                                              │
+│ /usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/executors/p │
+│ ipeline_executor.py:63 in _execute_task                                      │
+│                                                                              │
+│    60 │   │   async def _execute_task():                                     │
+│    61 │   │   │   if pipeline_run_id is None:                                │
+│    62 │   │   │   │   # Execute the pipeline without block runs              │
+│ ❱  63 │   │   │   │   await self.pipeline.execute(                           │
+│    64 │   │   │   │   │   analyze_outputs=analyze_outputs,                   │
+│    65 │   │   │   │   │   global_vars=global_vars,                           │
+│    66 │   │   │   │   │   run_sensors=run_sensors,                           │
+│                                                                              │
+│ /usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/pipe │
+│ line.py:787 in execute                                                       │
+│                                                                              │
+│    784 │   │   │   │   update_status=update_status,                          │
+│    785 │   │   │   )                                                         │
+│    786 │   │   )                                                             │
+│ ❱  787 │   │   await execution_task                                          │
+│    788 │                                                                     │
+│    789 │   def execute_sync(                                                 │
+│    790 │   │   self,                                                         │
+│                                                                              │
+│ /usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/bloc │
+│ k/__init__.py:264 in run_blocks                                              │
+│                                                                              │
+│    261 │   │   │   │   tasks[downstream_block.uuid] = None                   │
+│    262 │   │   │   │   blocks.put(downstream_block)                          │
+│    263 │   remaining_tasks = filter(lambda task: task is not None, tasks.val │
+│ ❱  264 │   await asyncio.gather(*remaining_tasks)                            │
+│    265                                                                       │
+│    266                                                                       │
+│    267 def run_blocks_sync(                                                  │
+│                                                                              │
+│ /usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/bloc │
+│ k/__init__.py:215 in execute_and_run_tests                                   │
+│                                                                              │
+│    212 │   │   │   │   )                                                     │
+│    213 │   │   │   │                                                         │
+│    214 │   │   │   │   if run_tests:                                         │
+│ ❱  215 │   │   │   │   │   block.run_tests(                                  │
+│    216 │   │   │   │   │   │   build_block_output_stdout=build_block_output_ │
+│    217 │   │   │   │   │   │   global_vars=global_vars,                      │
+│    218 │   │   │   │   │   │   update_tests=False,                           │
+│                                                                              │
+│ /usr/local/lib/python3.10/site-packages/mage_ai/data_preparation/models/bloc │
+│ k/__init__.py:3350 in run_tests                                              │
+│                                                                              │
+│   3347 │   │   │   │   │   │   if has_kwargs and global_vars is not None and │
+│   3348 │   │   │   │   │   │   │   test_function(*outputs, **global_vars)    │
+│   3349 │   │   │   │   │   │   else:                                         │
+│ ❱ 3350 │   │   │   │   │   │   │   test_function(*outputs)                   │
+│   3351 │   │   │   │   │   │   tests_passed += 1                             │
+│   3352 │   │   │   │   │   except AssertionError as err:                     │
+│   3353 │   │   │   │   │   │   error_message = f'FAIL: {test_function.__name │
+│ in test_output:73                                                            │
+╰──────────────────────────────────────────────────────────────────────────────╯
+KeyError: 'confusion_matrix_labels'

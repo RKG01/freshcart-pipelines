@@ -1,0 +1,5 @@
+[Ravi] listening with binding bangalore.koramangala.*
+[Ravi] RECEIVED routing_key=bangalore.koramangala.ride message_id=f404d2b0-48f2-4de6-8451-26a426e34d19 ack_status=acked
+[Ravi] REJECTED routing_key=bangalore.koramangala.food message_id=a196cdc8-92a3-40db-8465-720c4194e81f nack_status=nacked requeue=False reason=missing_or_invalid_zone
+[Ravi] RECEIVED routing_key=bangalore.koramangala.food message_id=e2b5da07-05c0-4ce0-8652-74a6a6c209a6 ack_status=acked
+[Ravi] RECEIVED routing_key=bangalore.koramangala.ride message_id=adb50756-a9e3-4abd-ab8f-b3cf86187ad8 ack_status=acked

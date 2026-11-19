@@ -1,0 +1,9 @@
+[Arjun] listening with binding bangalore.*.ride
+[Arjun] RECEIVED routing_key=bangalore.koramangala.ride message_id=f404d2b0-48f2-4de6-8451-26a426e34d19 ack_status=acked
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=63317edc-3cab-457f-963a-67ec2bef26a6 ack_status=acked
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=2d192b2a-1fab-41a2-a2b6-ba9ecb0b2ecf ack_status=acked
+[Arjun] RECEIVED routing_key=bangalore.indiranagar.ride message_id=0471b26b-def4-447b-a22b-e2d05e2d05a2 ack_status=acked
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=a29d0a49-8de8-4d2b-b187-7ea82c36a659 ack_status=acked
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=521ace7c-7207-4424-b397-e074321a5f52 ack_status=acked
+[Arjun] RECEIVED routing_key=bangalore.koramangala.ride message_id=adb50756-a9e3-4abd-ab8f-b3cf86187ad8 ack_status=acked
+[Arjun] RECEIVED routing_key=bangalore.whitefield.ride message_id=32781df3-b792-43fe-b7a5-960af00f3b71 ack_status=acked

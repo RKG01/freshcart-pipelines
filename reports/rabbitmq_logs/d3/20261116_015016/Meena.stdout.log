@@ -1,0 +1,11 @@
+[Meena] listening with binding bangalore.*.food
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=137a7a11-85f1-4809-bdcf-e8e79e137486 ack_status=acked
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=edf1aca7-5b3b-42c9-b011-3cff5efb3354 ack_status=acked
+[Meena] REJECTED routing_key=bangalore.koramangala.food message_id=a196cdc8-92a3-40db-8465-720c4194e81f nack_status=nacked requeue=False reason=missing_or_invalid_zone
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=6a4a46cf-be07-4a21-8b2e-19a63dd48b07 ack_status=acked
+[Meena] RECEIVED routing_key=bangalore.koramangala.food message_id=e2b5da07-05c0-4ce0-8652-74a6a6c209a6 ack_status=acked
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=ea1ac613-f8bc-4f4c-ae35-e6f8a9e9c8b8 ack_status=acked
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=4b89bf6a-f7b9-4fed-b44c-e825f578b716 ack_status=acked
+[Meena] RECEIVED routing_key=bangalore.whitefield.food message_id=cd224ee4-1ed1-415e-b9b8-f0f867badaa7 ack_status=acked
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=624c72ad-adc1-4262-b6f2-a4e841431dfb ack_status=acked
+[Meena] RECEIVED routing_key=bangalore.indiranagar.food message_id=a0ce5101-2e35-486f-8167-6347873fa527 ack_status=acked
