@@ -1,6 +1,6 @@
 # From Git to Gold
 
-Data Engineering assignment project for Devansh Singh (23BCS074). The instructor reference notebooks are preserved in `reference/`; one saved output in the FreshCart reference was cleared to remove a credential-like value from the notebook.
+Data Engineering assignment project for Harshit Raj . The instructor reference notebooks are preserved in `reference/`; one saved output in the FreshCart reference was cleared to remove a credential-like value from the notebook.
 
 ## Project layout
 
@@ -28,7 +28,7 @@ Actual saved evidence is available for B1–B5, C1–C4, and D1–D3 under `repo
 
 The integration in `stream/freshcart_lakehouse_consumer.py` and `stream/publish_freshcart_orders.py` was live-verified on 2026-11-16 using only `FRESHCART_BONUS`. One publisher invocation confirmed two messages; the consumer collected for 60.001 seconds, loaded them through the existing ELT functions, and one replay loaded the same payloads from the exact first file under a new run ID and physical path. Bronze order rows increased from 2 to 4; Silver and Gold stayed at 2. Gold revenue and loyalty points stayed at INR 5,092.38 and 50, with each test order present once and no duplicate Gold IDs. Actual fixture counts were 4 CRM rows, 1 FX row containing three rates, and 3 pincode rows. Five physical landing files were created across the initial pass and replay. Bronze grew because replay appended the same business payloads from a second file; Silver deduplication and Gold MERGE preserved order totals. Publisher and replay exit codes were 0. The consumer process terminated with completed success-stage output, but its OS exit code was not captured and is not claimed. Logs and SQL evidence are in `reports/bonus/live_5f057039be864ea497eaa9496e2810bd/`; see `reports/bonus/bonus_architecture.md` for the detailed evidence index. The consumer process's OS exit code was not captured and is not claimed; publisher and replay exited 0.
 
-The full report, with student details and personal reflection, is [`reports/assignment_report.md`](reports/assignment_report.md). The final PDF is [`reports/23BCS074_Devansh_Singh_Pipelines.pdf`](reports/23BCS074_Devansh_Singh_Pipelines.pdf). The PDF appendix contains 12 screenshots: three GitHub Actions, three Mage, two RabbitMQ, and four Snowflake saved-record images. It also includes readable excerpts from the genuine bonus logs and SQL snapshots; those excerpts are not live Snowsight screenshots.
+The full report, with student details and personal reflection, is [`reports/assignment_report.md`](reports/assignment_report.md). The final PDF is [`reports/23BCS074_Harshit_raj_Pipelines.pdf`](reports/23BCS074_Harshit_raj_Pipelines.pdf). The PDF appendix contains 12 screenshots: three GitHub Actions, three Mage, two RabbitMQ, and four Snowflake saved-record images. It also includes readable excerpts from the genuine bonus logs and SQL snapshots; those excerpts are not live Snowsight screenshots.
 
 ## Local setup
 
